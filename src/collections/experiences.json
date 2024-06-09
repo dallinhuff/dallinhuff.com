@@ -1,0 +1,23 @@
+[
+	{
+		"dates": "June 2024 • Present",
+		"role": "Full Stack SWE Intern",
+		"company": "Fidelity Investments",
+		"description": "Did stuff",
+		"logo": "/assets/images/experiences/fta.ico"
+	},
+	{
+		"dates": "May 2022 • June 2024",
+		"role": "Web Developer",
+		"company": "BYU Learning Suite",
+		"description": "Did other stuff",
+		"logo": "/assets/images/experiences/yoho.ico"
+	},
+	{
+		"dates": "April 2020 • April 2022",
+		"role": "Structural Engineering Technician",
+		"company": "Epic Engineering",
+		"description": "Did all kinds of stuff",
+		"logo": "/assets/images/experiences/wulian.ico"
+	}
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "BeautyBard", 
+    "description": "Beauty product review platform built with Scala, Tapir, CockroachDB, and Laminar.", 
+    "image": "/assets/images/projects/email.ml.png", 
+    "url": "https://github.com/dallinhuff/beautybard"
+  }, 
+  {
+    "name": "Megan & Dallin", 
+    "description": "My wedding's invitation request site, built with Vue.js and PostgreSQL.", 
+    "image": "/assets/images/projects/dns.surf.png", 
+    "url": "https://meganand.dallinhuff.com"
+  }, 
+  {
+    "name": "Thermablocks", 
+    "description": "Landing page for an insulated concrete form (ICF) manufacturer built with Astro.", 
+    "image": "/assets/images/projects/html.zone.png", 
+    "url": "https://github.com/dallinhuff/thermablock"
+  },
+  {
+    "name": "openai4s",
+    "description": "Pure functional OpenAI API client for Scala",
+    "image": "/assets/images/projects/html.zone.png",
+    "url": "https://github.com/dallinhuff/openai4s"
+  }
+]

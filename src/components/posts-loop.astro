@@ -1,6 +1,9 @@
 ---
 import posts from "../collections/content/post.json";
 
+interface Props {
+  count: number
+}
 const { count } = Astro.props;
 
 const postsLoop = posts.slice(0, count);

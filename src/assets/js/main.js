@@ -26,24 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
 	} else {
 		showDay();
 	}
-	stickyHeaderFuncionality();
+	stickyHeaderFunctionality();
 	applyMenuItemClasses();
 	evaluateHeaderPosition();
 	mobileMenuFunctionality();
 });
 
-// window.toggleDarkMode = function(){
-//     document.documentElement.classList.toggle('dark');
-//     if(document.documentElement.classList.contains('dark')){
-//         localStorage.setItem('dark_mode', true);
-//         window.darkMode = true;
-//     } else {
-//         window.darkMode = false;
-//         localStorage.setItem('dark_mode', false);
-//     }
-// }
-
-window.stickyHeaderFuncionality = () => {
+window.stickyHeaderFunctionality = () => {
 	window.addEventListener("scroll", () => {
 		evaluateHeaderPosition();
 	});

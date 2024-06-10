@@ -12,20 +12,16 @@ import Layout from "../layouts/main.astro";
       description="Here are some of the current projects I've been working on. I'm always working on something new, so check back often."
     />
 
-    <div
-      class="z-50 grid items-stretch w-full grid-cols-1 my-8 gap-7 sm:gap-5 sm:grid-cols-2"
-    >
+    <div class="z-50 grid items-stretch w-full grid-cols-1 my-8 gap-7 sm:gap-5 sm:grid-cols-2">
       {
-        projects.map((project) => {
-          return (
-            <Project
-              name={project.name}
-              description={project.description}
-              image={project.image}
-              url={project.url}
-            />
-          )
-        })
+        projects.map((project) =>
+          <Project
+            name={project.name}
+            description={project.description}
+            image={project.image}
+            url={project.url}
+          />
+        )
       }
     </div>
   </section>

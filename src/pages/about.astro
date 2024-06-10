@@ -3,6 +3,13 @@ import experiences from "../collections/experiences.json";
 import AboutExperience from "../components/about-experience.astro";
 import PageHeading from "../components/page-heading.astro";
 import Layout from "../layouts/main.astro";
+
+const socials = [
+  { url: "https://github.com/dallinhuff", text: "Github" },
+  { url: "https://linkedin.com/in/dallinhuff", text: "LinkedIn" },
+  { url: "https://threads.net/dallin.huff", text: "Threads" },
+  { url: "mailto:dallinhuff@gmail.com", text: "send me an email"}
+];
 ---
 
 <Layout title="About Me">
@@ -56,13 +63,18 @@ import Layout from "../layouts/main.astro";
     <p
       class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
     >
-      If you want to stay up to date with my work be sure to
-      <a
-        href="https://threads.net/dallin.huff"
-        target="_blank"
-        class="text-indigo-600 underline">follow me on Threads</a>, or you can
-      <a href="mailto:dallinhuff@gmail.com" class="text-indigo-600 underline">send me an email</a>
-      and I'll be sure to get back to you.
+      If you want to stay up to date with my work, be sure to follow me on
+      {
+        socials.map(({url, text}, index) =>
+          <>
+            {index < socials.length - 1 ? '' : 'or you can '}<a
+              href={url}
+              target="_blank"
+              class="text-indigo-600 underline"
+            >{text}</a>{index < socials.length - 1 ? ', ' : ''}
+          </>
+        )
+      }.
     </p>
   </section>
 </Layout>

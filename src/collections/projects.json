@@ -9,7 +9,7 @@
     "name": "Megan & Dallin",
     "description": "My wedding's invitation request site, built with Vue.js and PostgreSQL.",
     "image": "/assets/images/projects/dns.surf.png",
-    "url": "https://meganand.dallinhuff.com"
+    "url": "https://github.com/dallinhuff/meganand-client"
   },
   {
     "name": "Thermablocks",
@@ -22,5 +22,11 @@
     "description": "Pure functional OpenAI API client for Scala",
     "image": "/assets/images/projects/html.zone.png",
     "url": "https://github.com/dallinhuff/openai4s"
+  },
+  {
+    "name": "postgrePT",
+    "description": "Proof of concept using OpenAI API to generate database queries from natural language",
+    "image": "/assets/images/projects/dns.surf.png",
+    "url": "https://github.com/dallinhuff/postgrePT"
   }
 ]

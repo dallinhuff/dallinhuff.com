@@ -1,4 +1,4 @@
-name: Deploy
+name: CI/CD
 on:
   push:
     branches:
@@ -11,15 +11,19 @@ jobs:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Install dependencies
         run: npm i
+        
+      - name: Check formatting & linting
+        run: npm run check
 
-      - name: Build
+      - name: Build static site
         run: npm run build
 
-      - name: Deploy
+      - name: Deploy to production
         uses: reggionick/s3-deploy@v4
         with:
           folder: dist

@@ -1,19 +1,19 @@
 [
-	{
-		"dates": "June 2024 • Present",
-		"role": "Full Stack SWE Intern (KAD)",
-		"company": "Fidelity Investments",
+  {
+    "dates": "June 2024 • Present",
+    "role": "Full Stack SWE Intern (KAD)",
+    "company": "Fidelity Investments",
     "keyTasks": [
       "Built GitOps CI/CD pipelines for deploying containerized apps to Kubernetes",
       "Built containerized microservices in Go for internal tooling",
       "Participated in Agile/Scrum team workflow to iteratively improve and deploy products"
     ],
-		"logo": "/assets/images/experiences/fmr.jpeg"
-	},
-	{
-		"dates": "May 2022 • June 2024",
-		"role": "Web Developer",
-		"company": "BYU Learning Suite",
+    "logo": "/assets/images/experiences/fmr.jpeg"
+  },
+  {
+    "dates": "May 2022 • June 2024",
+    "role": "Web Developer",
+    "company": "BYU Learning Suite",
     "keyTasks": [
       "Migrated large portions of a legacy codebase to modern Vue.js app with a flux-like architecture",
       "Optimized for efficiency, maintainability, and modularity.",
@@ -21,16 +21,16 @@
       "Authored numerous in-house libraries to improve application performance and development time.",
       "Conducted code reviews, ensuring adherence to design standards and quality assurance"
     ],
-		"logo": "/assets/images/experiences/ls.jpeg"
-	},
-	{
-		"dates": "April 2020 • April 2022",
-		"role": "Structural Engineering Technician",
-		"company": "Epic Engineering",
+    "logo": "/assets/images/experiences/ls.jpeg"
+  },
+  {
+    "dates": "April 2020 • April 2022",
+    "role": "Structural Engineering Technician",
+    "company": "Epic Engineering",
     "keyTasks": [
       "Automated solar roof evaluations (through scripting and other means) for thousands of clients in 10+ states.",
       "Streamlined turnaround time for foundation and anchor-bolt calculations for numerous pre-manufactured steel construction projects in the Intermountain West."
     ],
-		"logo": "/assets/images/experiences/epic.jpeg"
-	}
+    "logo": "/assets/images/experiences/epic.jpeg"
+  }
 ]

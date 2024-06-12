@@ -1,4 +1,5 @@
 ---
+import education from "../collections/education.json";
 import experiences from "../collections/experiences.json";
 import AboutExperience from "../components/about-experience.astro";
 import PageSection from "../components/page-section.astro";
@@ -17,23 +18,22 @@ const socials = [
   description="Hello 👋 I'm a full-stack software engineer from Utah. I'm passionate about leveraging new technologies to solve real problems."
 >
   <PageSection title="Education & Certifications">
-    <ul
-      class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg list-disc list-inside"
-    >
-      <li>Brigham Young University — B.S., Computer Science</li>
-      <li>Advanced Scala 3 & Functional Programming — Rock the JVM</li>
-    </ul>
+    <ol class="pl-6 pt-1">
+      {education.map(({dates, role, company, logo, keyTasks, smallerLogo = false}, index) =>
+        <li class={index < education.length - 1 ? 'pb-6 border-l border-gray-200 dark:border-neutral-700' : ''}>
+          <AboutExperience {dates} {role} {company} {logo} {keyTasks} {smallerLogo} />
+        </li>
+      )}
+    </ol>
   </PageSection>
   <PageSection title="Experience">
-    <div class="pl-6 pt-1">
+    <ol class="pl-6 pt-1">
       {experiences.map(({dates, role, company, logo, keyTasks}, index) =>
-        index < experiences.length - 1 ?
-          <div class="pb-6 border-l border-gray-200 dark:border-neutral-700">
-            <AboutExperience {dates} {role} {company} {logo} {keyTasks} />
-          </div>
-          : <AboutExperience {dates} {role} {company} {logo} {keyTasks} />
+        <li class={index < experiences.length - 1 ? 'pb-6 border-l border-gray-200 dark:border-neutral-700' : ''}>
+          <AboutExperience {dates} {role} {company} {logo} {keyTasks} />
+        </li>
       )}
-    </div>
+    </ol>
   </PageSection>
   <PageSection title="Let's Connect">
     <p
@@ -43,7 +43,7 @@ const socials = [
       {
         socials.map(({url, text}, index) =>
           <>
-            {index == socials.length - 1 && 'or you can '}<a
+            {index == socials.length - 1 ? 'or you can ' : ''}<a
             href={url}
             target="_blank"
             class="text-indigo-600 underline"

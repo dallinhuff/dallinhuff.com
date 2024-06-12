@@ -1,0 +1,24 @@
+[
+  {
+    "dates": "Dec 2024",
+    "role": "B.S., Computer Science",
+    "company": "Brigham Young University",
+    "logo": "/assets/images/experiences/byu.png",
+    "keyTasks": [
+      "3.96 GPA",
+      "Coursework in algorithms, data structures, databases, testing & formal verification, software architecture, cloud computing, systems programming, web development, UI/UX & human-computer interaction, discrete math, computational theory, programming languages"
+    ]
+  },
+  {
+    "dates": "Sep 2023",
+    "role": "Advanced Scala 3 & Functional Programming",
+    "company": "Rock the JVM",
+    "logo": "/assets/images/experiences/rockthejvm.png",
+    "smallerLogo": true,
+    "keyTasks": [
+      "Parallel and concurrent functional programming",
+      "Contextual abstractions",
+      "Higher-kinded types and F-bounded polymorphism"
+    ]
+  }
+]

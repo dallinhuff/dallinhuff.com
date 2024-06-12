@@ -1,9 +1,8 @@
 ---
 import experiences from "../collections/experiences.json";
 import AboutExperience from "../components/about-experience.astro";
-import PageHeading from "../components/page-heading.astro";
 import PageSection from "../components/page-section.astro";
-import Layout from "../layouts/main.astro";
+import StaticPage from "../layouts/static-page.astro";
 
 const socials = [
   { url: "https://github.com/dallinhuff", text: "Github" },
@@ -13,48 +12,45 @@ const socials = [
 ];
 ---
 
-<Layout title="About Me">
-  <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0 flex flex-col gap-y-6">
-    <PageHeading
-      title="About Me"
-      description="Hello 👋 I'm a full-stack software engineer from Utah. I'm passionate about leveraging new technologies to solve real problems."
-    />
-    <PageSection title="Education & Certifications">
-      <ul
-        class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg list-disc list-inside"
-      >
-        <li>Brigham Young University — B.S., Computer Science</li>
-        <li>Advanced Scala 3 & Functional Programming — Rock the JVM</li>
-      </ul>
-    </PageSection>
-    <PageSection title="Experience">
-      <div class="pl-6 pt-1">
-        {experiences.map(({dates, role, company, logo, keyTasks}, index) =>
-          index < experiences.length - 1 ?
-            <div class="pb-6 border-l border-gray-200 dark:border-neutral-700">
-              <AboutExperience {dates} {role} {company} {logo} {keyTasks} />
-            </div> 
+<StaticPage
+  title="About Me"
+  description="Hello 👋 I'm a full-stack software engineer from Utah. I'm passionate about leveraging new technologies to solve real problems."
+>
+  <PageSection title="Education & Certifications">
+    <ul
+      class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg list-disc list-inside"
+    >
+      <li>Brigham Young University — B.S., Computer Science</li>
+      <li>Advanced Scala 3 & Functional Programming — Rock the JVM</li>
+    </ul>
+  </PageSection>
+  <PageSection title="Experience">
+    <div class="pl-6 pt-1">
+      {experiences.map(({dates, role, company, logo, keyTasks}, index) =>
+        index < experiences.length - 1 ?
+          <div class="pb-6 border-l border-gray-200 dark:border-neutral-700">
+            <AboutExperience {dates} {role} {company} {logo} {keyTasks} />
+          </div>
           : <AboutExperience {dates} {role} {company} {logo} {keyTasks} />
-        )}
-      </div>
-    </PageSection>
-    <PageSection title="Let's Connect">
-      <p
-        class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
-      >
-        If you want to stay up to date with my work, be sure to follow me on
-        {
-          socials.map(({url, text}, index) =>
-            <>
-              {index == socials.length - 1 && 'or you can '}<a
-              href={url}
-              target="_blank"
-              class="text-indigo-600 underline"
-            >{text}</a>{index < socials.length - 1 ? ', ' : ''}
-            </>
-          )
-        } and I'll be sure to get back to you.
-      </p>
-    </PageSection>
-  </section>
-</Layout>
+      )}
+    </div>
+  </PageSection>
+  <PageSection title="Let's Connect">
+    <p
+      class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
+    >
+      If you want to stay up to date with my work, be sure to follow me on
+      {
+        socials.map(({url, text}, index) =>
+          <>
+            {index == socials.length - 1 && 'or you can '}<a
+            href={url}
+            target="_blank"
+            class="text-indigo-600 underline"
+          >{text}</a>{index < socials.length - 1 ? ', ' : ''}
+          </>
+        )
+      } and I'll be sure to get back to you.
+    </p>
+  </PageSection>
+</StaticPage>

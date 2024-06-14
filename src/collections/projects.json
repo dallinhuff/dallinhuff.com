@@ -2,13 +2,13 @@
   {
     "name": "BeautyBard",
     "description": "Beauty product review platform built with Scala, Tapir, CockroachDB, and Laminar.",
-    "image": "/assets/images/projects/email.ml.png",
+    "image": "/assets/images/projects/beautybard.png",
     "url": "https://github.com/dallinhuff/beautybard"
   },
   {
     "name": "Megan & Dallin",
     "description": "My wedding's invitation request site, built with Vue.js and PostgreSQL.",
-    "image": "/assets/images/projects/dns.surf.png",
+    "image": "/assets/images/projects/meganand.png",
     "url": "https://github.com/dallinhuff/meganand-client"
   },
   {
